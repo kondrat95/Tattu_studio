@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylecatalog.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="conteiner">
+                <div class="header-line"></div>
+                <div class="header-box">
+                    <img class="header-logo-img" src="images/logo.svg" alt="logo">
+                    <div class="header-nav__menu-burger">
+                        <span></span>
+                    </div>
+                    <nav class="header-nav">
+                        <button class="header-nav__btn">
+                            <img class="header-nav__btn--img" src="images/Vector36.svg" alt="img">
+                        </button>
+                        <div class="header-nav-search">
+                            <button class="header-nav-search__btn">
+                                <img class="header-nav-search__btn--img" src="images/Icon-search.svg" alt="search">
+                            </button>
+                            <input class="header-nav-search__field" type="text">
+                        </div>
+                        <div class="header-nav-search-mobail">
+                            <textarea name="search" id="" cols="30" rows="10"></textarea>
+                            <button class="header-nav-search-mobail__btn">
+                                <img class="header-nav-search-mobail__btn--img" src="images/Icon-search.svg"
+                                    alt="search">
+                            </button>
+                        </div>
+                        <ul class="header-nav-list">
+                            <li class="header-nav-list__style header-nav-list__style--activ"><a
+                                    class="header-nav-list__style-link" href="indexcatalog.html">КАТАЛОГ</a>
+                            </li>
+                            <li class="header-nav-list__style"><a class="header-nav-list__style-link "
+                                    href="indexabout.html">О
+                                    НАС</a>
+                            </li>
+                            <li class="header-nav-list__style "><a class="header-nav-list__style-link"
+                                    href="indexquestion.html">ВОПРОСЫ/ОТВЕТЫ</a></li>
+                            <li class="header-nav-list__style "><a class="header-nav-list__style-link"
+                                    href="indexcontact.html">КОНТАКТЫ</a>
+                            </li>
+                            <li class="header-nav-list__style"><a class="header-nav-list__style-link"
+                                    href="#">КАБИНЕТ</a>
+                            </li>
+                            <li id="full" class="header-nav-list__style--castom header-nav-list__style "><a
+                                    class="header-nav-list__style-link header-nav-list__style-link__search"
+                                    href="#">ПОИСК</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="conteiner">
+                <div class="main-box">
+                    <section class="filter">
+                        <div class="button-box">
+                            <a href="#" onclick="location.reload(); return false;"> <button id="filter-button"
+                                    class="filter-button">очистить
+                                    фильтры</button></a>
+                        </div>
+                        <div class="button-mobile">
+                            <button class="content-btn-mobile">фильтры</button>
+                        </div>
+                        <div class="content">
+                            <button class="content-close__btn">
+                                <img class="content-close__btn--img" src="images/Vector36.svg" alt="img">
+                            </button>
+                            <div class="collection">
+                                <div class="collection-header">
+                                    <h3 class="collection-header__title">Коллекция</h3>
+                                    <img class="collection-header__btn-img collection-header__btn"
+                                        src="images/arrow-btn.svg" alt="img">
+                                </div>
+                                <div class="collection-list">
+                                    <div class="collection-list-position">
+                                        <label for="gothic" class="collection-list-position__name">готические</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="gothic" id="gothic" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label class="collection-list-position__name" for="butterflies">бабочки</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="butterflies" id="butterflies" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label for="nature" class="collection-list-position__name">природа</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="nature" id="nature" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label for="anime" class="collection-list-position__name">аниме</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="anime" id="anime" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label for="dragons" class="collection-list-position__name">драконы</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="dragons" id="dragons" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label for="fantasy" class="collection-list-position__name">фентези</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="fantasy" id="fantasy" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label for="books" class="collection-list-position__name">книги</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="books" id="books" type="checkbox">
+                                    </div>
+                                    <div class="collection-list-position">
+                                        <label for="magic" class="collection-list-position__name">магия</label>
+                                        <input class="collection-list-position__check buttons-filter" name="collection"
+                                            value="magic" id="magic" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="color">
+                                <div class="color-header">
+                                    <h3 class="color-header__title">Цвет</h3>
+                                    <img class="color-header__btn-img color-header__btn" src="images/arrow-btn.svg"
+                                        alt="img">
+                                </div>
+                                <div class="color-list">
+                                    <div class="color-list-position">
+                                        <label for="black-white" class="color-list-position__name">чёрно-белые</label>
+                                        <input class="color-list-position__check buttons-filter" name="color"
+                                            value="black-white" id="black-white" type="checkbox">
+                                    </div>
+                                    <div class="color-list-position">
+                                        <label class="color-list-position__name" for="colored">цветные</label>
+                                        <input class="color-list-position__check buttons-filter" name="color"
+                                            value="colored" id="colored" type="checkbox">
+                                    </div>
+                                    <div class="color-list-position">
+                                        <label for="trash-polka" class="color-list-position__name">треш-полька</label>
+                                        <input class="color-list-position__check buttons-filter" name="color"
+                                            value="trash-polka" id="trash-polka" type="checkbox">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="size">
+                                <div class="size-header">
+                                    <h3 class="size-header__title">размер</h3>
+                                    <img class="size-header__btn-img size-header__btn" src="images/arrow-btn.svg"
+                                        alt="img">
+                                </div>
+                                <div class="size-list">
+                                    <div class="size-list-position">
+                                        <label for="3x3" class="size-list-position__name">3х3 см</label>
+                                        <input class="size-list-position__check buttons-filter" name="size" value="3x3"
+                                            id="3x3" type="checkbox">
+                                    </div>
+                                    <div class="size-list-position">
+                                        <label class="size-list-position__name" for="5x5">5х5 см</label>
+                                        <input class="size-list-position__check buttons-filter" name="size" value="5x5"
+                                            id="5x5" type="checkbox">
+                                    </div>
+                                    <div class="size-list-position">
+                                        <label for="10x10" class="size-list-position__name">10х10 см</label>
+                                        <input class="size-list-position__check buttons-filter" name="size"
+                                            value="10x10" id="10x10" type="checkbox">
+                                    </div>
+                                    <div class="size-list-position">
+                                        <label for="13x13" class="size-list-position__name">13х13 см</label>
+                                        <input class="size-list-position__check buttons-filter" name="size"
+                                            value="13x13" id="13x13" type="checkbox">
+                                    </div>
+                                    <div class="size-list-position">
+                                        <label for="more" class="size-list-position__name">БОЛЬШЕ 13х13 см</label>
+                                        <input class="size-list-position__check buttons-filter" name="size" value="more"
+                                            id="more" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    <section class="gallery">
+                        <div class="gallery-title">
+                            <h1 class="gallery-title__text">каталог</h1>
+                        </div>
+                        <div class="gallery-box">
+                            <div class="gallery-content gothic black-white 3x3" data-id="Bat"
+                                data-category="gothic black-white 3x3">
+                                <div class="gallery-content-left left-conversely">
+                                    <img src="images/Rectangle 9.jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 4,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Летучая мышь</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">готические /
+                                            чёрно-белая /
+                                            3х3
+                                            см</p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content conversely anime black-white 5x5" data-id="demon-blade"
+                                data-category="anime black-white 5x5">
+                                <div class="gallery-content-left">
+                                    <img src="images/Rectangle 9 (1).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right right-conversely">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 6,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Набор чиби-смайлов
+                                            «Рассекающий клинок демонов»</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">аниме / чёрно-белая /
+                                            5х5
+                                            см
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="gallery-content-right__availability gallery-content-right__availability--color">
+                                        <p
+                                            class="gallery-content-right__availability-text gallery-content-right__availability-text--color ">
+                                            под заказ (1 день)</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content dragons black-white 5x5" data-id="dragons-rosse"
+                                data-category="dragons black-white 5x5">
+                                <div class="gallery-content-left left-conversely ">
+                                    <img src="images/Rectangle 9 (2).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 6,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Дракон с розами</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">драконы / чёрно-белая /
+                                            5х5
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content conversely gothic black-white 3x3" data-id="ket"
+                                data-category="gothic black-white 3x3">
+                                <div class="gallery-content-left">
+                                    <img src="images/Rectangle 9 (3).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right right-conversely">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 4,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Кот с черепом</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">готические /
+                                            чёрно-белая /
+                                            3х3
+                                            см</p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content magic black-white 5x5" data-id="crystals"
+                                data-category="magic black-white 5x5">
+                                <div class="gallery-content-left left-conversely">
+                                    <img src="images/Rectangle 9 (4).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 6,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Набор кристаллов
+                                            с растениями</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">магия / чёрно-белая /
+                                            5х5
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content conversely dragons colored 5x5" data-id="dragons-sakura"
+                                data-category="dragons colored 5x5">
+                                <div class="gallery-content-left">
+                                    <img src="images/Rectangle 9 (5).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right right-conversely">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 7,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Дракон с сакурой</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">драконы / цветная / 5х5
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content magic black-white 5x5" data-id="moon-sun"
+                                data-category="magic black-white 5x5">
+                                <div class="gallery-content-left left-conversely">
+                                    <img src="images/Rectangle 9 (6).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 6,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Таро Луна и Солнце</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">магия / чёрно-белая /
+                                            5х5
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content conversely butterflies black-white 5x5"
+                                data-id="butterflies-branch" data-category="butterflies black-white 5x5">
+                                <div class="gallery-content-left">
+                                    <img src="images/Rectangle 9 (7).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right right-conversely">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 6,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Бабочка на веточке
+                                            цветка</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">бабочки / чёрно-белая /
+                                            5х5
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content books black-white 3x3" data-id="books-flowers"
+                                data-category="books black-white 3x3">
+                                <div class="gallery-content-left left-conversely">
+                                    <img src="images/Rectangle 9 (8).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 4,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Книги с цвтеами</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">книги / чёрно-белая /
+                                            3х3
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content conversely butterflies black-white 3x3" data-id="Gossamer-heart"
+                                data-category="butterflies black-white 3x3">
+                                <div class="gallery-content-left">
+                                    <img src="images/Rectangle 9 (9).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right right-conversely">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 4,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Паутинка сердцем</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">бабочки / чёрно-белая /
+                                            3х3
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-content anime black-white 3x3" data-id="Antiquity"
+                                data-category="anime black-white 3x3">
+                                <div class="gallery-content-left left-conversely">
+                                    <img src="images/Rectangle 9 (10).jpg" alt="img">
+                                </div>
+                                <div class="gallery-content-right">
+                                    <div class="gallery-content-right__price">
+                                        <p class="gallery-content-right__price-text"><span
+                                                class="gallery-content-right__price-text--size"> 4,5</span> byn</p>
+                                    </div>
+                                    <div class="gallery-content-right__description">
+                                        <h2 class="gallery-content-right__description-text">Сейлор-мун
+                                            и Античность</h2>
+                                        <div class="gallery-content-right__description-line"></div>
+                                        <p class="gallery-content-right__description-filter">аниме / чёрно-белая /
+                                            3х3
+                                            см
+                                        </p>
+                                    </div>
+                                    <div class="gallery-content-right__availability">
+                                        <p class="gallery-content-right__availability-text">в наличии</p>
+                                    </div>
+                                    <div class="gallery-content-right__btn">
+                                        <button class="gallery-content-right__btn-Addcart">в корзину</button>
+                                        <button class="gallery-content-right__btn-more">подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-more">
+                            <button class="gallery-more__btn">загрузить ещё</button>
+                        </div>
+                    </section>
+                </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="conteiner">
+                <div class="footer-menu">
+                    <ul class="footer-menu-block">
+                        <li class="footer-menu-list__style footer-menu-list--gap"><a
+                                class="footer-menu-list__style-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="footer-menu-list__style"><a class="footer-menu-list__style-link" href="indexcatalog.html">Каталог</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-menu-block">
+                        <li class="footer-menu-list__style footer-menu-list--gap"><a
+                                class="footer-menu-list__style-link" href="#">Кабинет</a>
+                        </li>
+                        <li class="footer-menu-list__style"><a class="footer-menu-list__style-link"
+                                href="indexquestion.html">Вопросы/ответы</a></li>
+                    </ul>
+                    <ul class="footer-menu-block">
+                        <li class="footer-menu-list__style footer-menu-list--gap"><a
+                                class="footer-menu-list__style-link" href="indexabout.html">О нас</a>
+                        </li>
+                        <li class="footer-menu-list__style"><a class="footer-menu-list__style-link"
+                                href="indexcontact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-info-company">
+                        <div class="footer-info-company__line"></div>
+                        <div class="footer-info-company__text">
+                            BodyArt 2022
+                        </div>
+                    </div>
+                    <p class="footer-info-company--add">ИП Иванов УНП 33322233</p>
+                </div>
+                <div class="footer-social">
+                    <div class="footer-social-media">
+                        <a class="footer-social-media--hover" href=""><img class="footer-social-media__img"
+                                src="images/icon-inst.svg" alt="instagram"></a>
+                        <a class="footer-social-media--hover" href="#"><img class="footer-social-media__img"
+                                src="images/icon-tiktok.svg" alt="tiktok"></a>
+                        <a class="footer-social-media--hover" href="#"><img class="footer-social-media__img"
+                                src="images/icon-youtube.svg" alt="youtube"></a>
+                        <a class="footer-social-media--hover" href="#"><img class="footer-social-media__img"
+                                src="images/icon-twit.svg" alt="twit"></a>
+                    </div>
+                    <a href="#"><img class="footer-social-img" src="images/icon-webpay.svg" alt="webpay"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/maincatalog.min.js"></script>
+    
+</body>
+
+</html>
